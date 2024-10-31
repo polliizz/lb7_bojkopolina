@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+bool isPrime(int number) {
+for (int i = 2; i * i <= number; i++) {
+if (number % i == 0) return false;
+    }
+return true;
+    }
+int main() {
+vector<int> numbers = {3, 8, 2, 13, 18, 2, 20, 27, 5};
+vector<int> primes;
+for (int num : numbers) {
+if (isPrime(num)) {
+primes.push_back(num);
+    }
+    }
+cout << "прості числа: ";
+for (int prime : primes) {
+cout << prime << " ";
+    }
+return 0;
+    }
